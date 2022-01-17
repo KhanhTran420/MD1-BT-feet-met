@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- <div>-->
+<!--     <label>-->
+<!--         Feet:<input type="number" id="Feet" onchange="footTo(this.value)" oninput="footTo(this.value)" >-->
+<!--     </label>-->
+<!--     <p>Metter: <span id="outputmetter"></span></p>-->
+<!-- </div>-->
+<!-- <div>-->
+<!--     <label>-->
+<!--         Metter:<input type="number" id="Met" onchange="metterto(this.value)" oninput="metterto(this.value)" >-->
+<!--     </label>-->
+<!--     <p>Feet: <span id="outputFeet"></span></p>-->
+<!-- </div>-->
+
+<!--<script>-->
+<!--    function footTo(foot){-->
+<!--        metter = 3.279* foot;-->
+<!--        document.getElementById("outputmetter").innerHTML=metter;-->
+<!--        return metter;-->
+<!--    }-->
+<!--    function metterto(metter){-->
+<!--        foot = 3.279* metter;-->
+<!--        document.getElementById("outputFeet").innerHTML=foot;-->
+<!--        return foot;-->
+<!--    }-->
+
+
+<!--</script>-->
+
+    <input type="number" id="giatrivao">
+    <select id="selec1">
+        <option value="Met">Met</option>
+        <option value="Feet">Feet</option>
+    </select>
+    <select id="selec2">
+    <option value="Met">Met</option>
+    <option value="Feet">Feet</option>
+    </select>
+  <button onclick="thaydoi()">Tinh</button>
+  <p id="nona"></p>
+
+<script>
+   function thaydoi(){
+       let select1 = document.getElementById("selec1").value;
+       let select2 = document.getElementById("selec2").value;
+       let dauvao  = document.getElementById("giatrivao").value;
+       let result ;
+       if (select1=="Met" && select2=="Feet"){
+             result = (dauvao*3.279)
+       }
+       if (select1=="Feet"&&select2=="Met"){
+           result = (dauvao*0.305)
+       }
+       document.getElementById("nona").innerHTML=result
+   }
+</script>
+
+
+
+</body>
+</html>
